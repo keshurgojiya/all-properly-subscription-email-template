@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AllProperly — Payment Confirmation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" type="text/css">
+  <style>
+    @media only screen and (max-width:600px) {
+      .container { width:100% !important; padding:12px !important; }
+      .stack-column, .stack-column td { display:block !important; width:100% !important; text-align:center !important; }
+      .hero-img { width:100% !important; height:auto !important; }
+    }
+  </style>
+</head>
+<body style="background:#475567; margin:0; padding:20px; font-family:Nunito, Arial, sans-serif;">
+
+  <!-- Wrapper -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="650" class="container" cellpadding="0" cellspacing="0" border="0" style="max-width:650px; width:100%; background:#ffffff; border:1px solid #e4e9f0; border-radius:10px; padding:20px;">
+          
+          <!-- Logo -->
+          <tr>
+            <td align="center" style="padding:18px 0;">
+              <a href="https://app.allproperly.com/dashboard" target="_blank" style="text-decoration:none;">
+                <img src="images/logo.png" alt="AllProperly" width="200" style="display:block; border:0; outline:none; text-decoration:none;">
+              </a>
+            </td>
+          </tr>
+
+          <!-- Hero image -->
+          <tr>
+            <td align="center" style="padding: 20px">
+              <img class="hero-img" src="images/payment4.png" alt="Payment Success" width="350" style="max-width:100%; display:block; border:0; outline:none; text-decoration:none; border-radius:8px;">
+            </td>
+          </tr>
+
+          <!-- Headline -->
+          <tr>
+            <td align="center" style="padding:10px 20px;">
+              <div style="color:#475567; font-size:28px; font-weight:700; line-height:36px;">
+                Your payment was processed successfully!
+              </div>
+            </td>
+          </tr>
+
+          <!-- Subheadline -->
+          <tr>
+            <td align="center" style="padding:0 20px 20px;">
+              <div style="color:#475567; font-size:16px; line-height:22px;">
+                Thank you for your payment,  
+                Your subscription has been received.
+              </div>
+            </td>
+          </tr>
+
+          <!-- Payment summary -->
+          <tr>
+            <td style="padding:12px 20px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f5f8f6; border:1px solid #e4e9f0; border-radius:12px;">
+                <tr>
+                  <td style="padding:20px; text-align:left; font-size:14px; color:#475567; line-height:22px;">
+                    
+                    <!-- Heading -->
+                    <div style="font-size:18px; font-weight:700; color:#475567; border-bottom:1px solid #e4e9f0; padding-bottom:10px; margin-bottom:12px;">
+                      🧾 Receipt Summary
+                    </div>
+
+                    <!-- Two-column table -->
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="padding:6px 0; font-weight:600; color:#475567;">Plan:</td>
+                        <td style="padding:6px 0; color:#475567;">{{planName}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:6px 0; font-weight:600; color:#475567;">Previous Plan:</td>
+                        <td style="padding:6px 0; color:#475567;">{{oldPlanName}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:6px 0; font-weight:600; color:#475567;">Amount:</td>
+                        <td style="padding:6px 0; color:#7baa98; font-weight:700;">${{amount}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:6px 0; font-weight:600; color:#475567;">Billing Cycle:</td>
+                        <td style="padding:6px 0; color:#475567;">{{billingCycle}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:6px 0; font-weight:600; color:#475567;">Next Renewal:</td>
+                        <td style="padding:6px 0; color:#475567;">{{renewalDate}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:6px 0; font-weight:600; color:#475567;">Payment Method:</td>
+                        <td style="padding:6px 0; color:#475567;">{{paymentMethod}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:6px 0; font-weight:600; color:#475567;">Date:</td>
+                        <td style="padding:6px 0; color:#475567;">{{paymentDate}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:6px 0; font-weight:600; color:#475567;">Invoice #:</td>
+                        <td style="padding:6px 0; color:#475567;">{{invoiceNumber}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Additional details -->
+          <tr>
+            <td style="padding:20px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f9fcfb; border-left:4px solid #7baa98; border-radius:8px;">
+                <tr>
+                  <td style="padding:15px 18px; font-size:14px; color:#475567; line-height:22px;">
+                    <div style="margin-bottom:6px;">✅ If you <strong>upgraded</strong>, your new features are now available immediately.</div>
+                    <div style="margin-bottom:6px;">✅ If you <strong>downgraded</strong>, your current plan will remain active until the end of your billing cycle.</div>
+                    <div>✅ For refunds, prorated charges, or failed payments, check your 
+                      <a href="https://app.allproperly.com/dashboard" style="color:#7baa98; font-weight:600; text-decoration:none;">billing dashboard</a>.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+
+          <!-- CTA -->
+          <tr>
+            <td align="center" style="padding:18px 20px;">
+              <a href="https://app.allproperly.com/dashboard" target="_blank" style="background:#7baa98; color:#ffffff; text-decoration:none; font-size:15px; font-weight:600; padding:12px 26px; border-radius:8px; display:inline-block;">
+                View Invoice
+              </a>
+              <a href="https://app.allproperly.com/dashboard" target="_blank" style="background:#7baa98; color:#ffffff; text-decoration:none; font-size:15px; font-weight:600; padding:12px 26px; border-radius:8px; display:inline-block; margin-left:10px;">
+                Manage Subscription
+              </a>
+            </td>
+          </tr>
+
+          <!-- Support -->
+          <tr>
+            <td align="center" style="padding:10px 20px;">
+              <div style="font-size:14px; color:#475567; line-height:20px;">
+                Need help with your billing?  
+                <a href="mailto:support@allproperly.com" style="color:#7baa98; text-decoration:none;">Contact Support</a>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding:18px 20px 6px; color:#475567; font-size:14px; line-height:20px;">
+              You’re receiving this email because you have a subscription with AllProperly.com.
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:0 20px 22px; color:#475567; font-size:14px; line-height:20px;">
+              © 2025 All Properly LLC. |
+              <a href="#" target="_blank" style="color:#6A8976; text-decoration:none;">Unsubscribe</a>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
